@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0;url=https://zeater2322.github.io/yolov7-ObjectDetect/all/templates/index.html" />
+  <meta charset="UTF-8">
+  <title>Object Detection with YOLOv7</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
+<body>
+  <div class="container">
+    <h1>Object Detection using YOLOv7</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
+      <div class="file-input">
+        <input type="file" name="file" id="file" accept="image/*">
+        <label for="file">Choose an Image</label>
+      </div>
+      <input type="submit" value="Detect Objects" id="submit-button">
+    </form>
+	<div id="results">
+	  <div id="upload-status"></div>  <!-- New line to display upload status -->
+	  <canvas id="canvas"></canvas>
+	  <!-- Object detection results will be displayed here -->
+	</div>
+
+  </div>
+</body>
+</html>
