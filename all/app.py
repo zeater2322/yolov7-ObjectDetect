@@ -130,4 +130,4 @@ def upload():
         return jsonify({'result': detected_objects})
 
 if __name__ == '__main__':
-    app.run(host='10.163.8.12',port=5000,debug=True)
+    app.run(host='0.0.0.0',port=5000,debug=True)
