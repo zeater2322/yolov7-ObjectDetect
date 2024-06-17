@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Detection with YOLOv7</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Object Detection using YOLOv7</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
+      <div class="file-input">
+        <input type="file" name="file" id="file" accept="image/*">
+        <label for="file">Choose an Image</label>
+      </div>
+      <input type="submit" value="Detect Objects" id="submit-button">
+    </form>
+	<div id="results">
+	  <div id="upload-status"></div>  <!-- New line to display upload status -->
+	  <canvas id="canvas"></canvas>
+	  <!-- Object detection results will be displayed here -->
+	</div>
+  <div class="explanation-container">
+    <p>使用說明:</p>
+    <p>請點擊Choose an Image按鈕選擇圖片，接著按Detect Objects按鈕做偵測。</p>
+  </div>
+  
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
